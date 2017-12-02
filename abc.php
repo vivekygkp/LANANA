@@ -1,10 +1,7 @@
 <html>
 <head>
-<title>Amazon Web Services Sign-In</title>
+<title>Lanana Web Services Sign-In</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="csrf_token" content="PpmbKUooc0p30g5tmuM9J56BrkJIRHlunu3znLL1PN6SfcnlxA0ZQwWQRTp3qCn3VZtLY754fXl8yWCERsQEpsfeRPQ9QFunOjRYRBsdpSFHdVGQQqDqxMjRhV1rmsa5UDoDxmPZ4E8EyrBUXp3KNnhpA2FKyBjqVlNPoVhoigBgDhq6meUfpgxb6p0nWGocKRZghC22kkGDtGG1MHwdoZgOcbSkD4cdSklkWbay8zh9EYwJQGymFDG8nbsrac78">
-<meta name="session_id" content="KD8vBZvpyCiTRTYOHq2mU1X1UpCw1dM9">
 
 
 
@@ -20,7 +17,6 @@
  
 
 <script>
-  /*  var mfaDisabled = Boolean(false);
     var isMobileApp = (Boolean)(false);
     var loginpage_error_title_unknownaccount = "There was an error";
     var loginpage_error_message_unknownaccount = "An AWS account with that sign-in information does not exist. Try again or create a new account.";
@@ -45,10 +41,10 @@
         };
     };
 
-    var signupUrl = "https://portal.aws.amazon.com/billing/signup";
-    var contactUsUrl = "https://aws.amazon.com/forms/aws-mfa-support";
-    var contactPremiumSupportUrl = "https://aws.amazon.com/contact-us";
-    var authPortalUrl = "https://www.amazon.com/ap/signin?openid.assoc_handle=aws&openid.return_to=https%3A%2F%2Fsignin.aws.amazon.com%2Foauth%3Fcoupled_root%3Dtrue%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fconsole.aws.amazon.com%252Fconsole%252Fhome%253Fstate%253DhashArgs%252523%2526isauthcode%253Dtrue%26client_id%3Darn%253Aaws%253Aiam%253A%253A015428540659%253Auser%252Fhomepage&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&action=&disableCorpSignUp=&clientContext=&marketPlaceId=&poolName=&authCookies=&pageId=aws.login&siteState=registered%2CEN_US&accountStatusPolicy=P1&sso=&openid.pape.preferred_auth_policies=MultifactorPhysical&openid.pape.max_auth_age=120&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&server=%2Fap%2Fsignin%3Fie%3DUTF8&accountPoolAlias=&forceMobileApp=null&language=EN_US&forceMobileLayout=0";
+    var signupUrl = "";
+    var contactUsUrl = "";
+    var contactPremiumSupportUrl = "h";
+   
     var iamLoginUrl = "/oauth?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&response_type=code&iam_user=true";
     var isAccountUpdateReAuth = (Boolean)(false);
     var showErrorMessage = (Boolean)(null);
@@ -73,8 +69,8 @@
     .aws-signin-main-box{margin:0 auto}
 .fixed-width{width:940px}
 .aws-signin-logo-header-box{margin-top:30px;margin-bottom:40px}
-#logo_container>h1.background-left{background-repeat:no-repeat;background-size:contain;color:rgba(0,0,0,0);height:50px;padding:0;width:84px;border-bottom:0;background-image:url("data:image/png;base64,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")}
-#logo_container>h1.background-mid{background-repeat:no-repeat;background-size:contain;color:rgba(0,0,0,0);margin:auto;height:50px;padding:0;width:84px;border-bottom:0;background-image:url("data:image/png;base64,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")}
+#logo_container>h1.background-left{background-repeat:no-repeat;background-size:contain;color:rgba(0,0,0,0);height:50px;padding:0;width:84px;border-bottom:0;background-image:url("aws")}
+#logo_container>h1.background-mid{background-repeat:no-repeat;background-size:contain;color:rgba(0,0,0,0);margin:auto;height:50px;padding:0;width:84px;border-bottom:0;background-image:url("arrow")}
 a#logo_link{color:transparent;width:84px;height:50px;display:block;font-size:12px}
 .main-table:before,.main-table:after{content:" ";display:table}
 .main-table:after{clear:both}
@@ -524,7 +520,7 @@ to{transform:rotate(360deg)}
             <script type="text/javascript">
                 var currentYear = new Date().getFullYear();
                 document.write('&copy; ' + currentYear + ', Amazon Web Services, Inc. or its affiliates. All rights reserved.');
-            </script>© 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+            </script>\A9 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved.
         </span>
     
 
@@ -553,13 +549,13 @@ to{transform:rotate(360deg)}
                 
                     
                       <li class="aws-signin-button-dropup-item" onclick="changeLanguage('es_ES')">
-                        <span class="aws-signin-button-dropup-item-content">Español</span>
+                        <span class="aws-signin-button-dropup-item-content">Espa\F1ol</span>
                       </li>
                     
                 
                     
                       <li class="aws-signin-button-dropup-item" onclick="changeLanguage('fr_FR')">
-                        <span class="aws-signin-button-dropup-item-content">Français</span>
+                        <span class="aws-signin-button-dropup-item-content">Fran\E7ais</span>
                       </li>
                     
                 
@@ -571,7 +567,7 @@ to{transform:rotate(360deg)}
                 
                     
                       <li class="aws-signin-button-dropup-item" onclick="changeLanguage('pt_BR')">
-                        <span class="aws-signin-button-dropup-item-content">Português</span>
+                        <span class="aws-signin-button-dropup-item-content">Portugu\EAs</span>
                       </li>
                     
                 
